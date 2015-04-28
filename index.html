@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="pragma" content="no-cache" /> 
+    <meta charset="utf-8">
+    <title>Where is Poppy?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <script src="poppy.js"></script>
+    <script src="jquery.js"></script>
+   
+    <script src="jquery.timeago.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.1"></script>
+    <script src="oms.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Where is Poppy?</h1>
+        <div class="infos">
+          <a href="https://github.com/daweeed/whereispoppy/tree/gh-pages">Github repository</a> |
+          <a href="https://github.com/daweeed/whereispoppy/blob/gh-pages/poppy.js">Add your Poppy</a> |
+          <a href="https://www.poppy-project.org/">Poppy Project</a>
+        </div>
+        <br/>
+ <!--   <div id="eventCalendarHumanDate"></div>-->
+    </header>
+    <div id="map"></div>
+    <script>
+        window.onload = function() {
+
+      // map & layout
+      credits = 'Forked from <a href="https://github.com/faitmain/fablab.faitmain.org">Fait Main</a>, Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';
+
+      var layer = new L.StamenTileLayer('watercolor');
+      var map = L.map('map', {attributionControl: false}).setView([48.8567, 2.3508], 5);
+      map.addControl(new L.Control.Attribution({prefix: credits}));
+      map.addLayer(layer);
+      var oms = new OverlappingMarkerSpiderfier(map);
+      
+
+     // popup
+     var popup = new L.Popup({closeButton: false, offset: new L.Point(0.5, -24)});
+     oms.addListener('click', function(marker) {
+          popup.setContent(marker.desc);
+          popup.setLatLng(marker.getLatLng());
+          map.openPopup(popup);
+       });
+
+    // poppy
+    for (var i = 0; i < poppycreatures.length; i++) {
+      var poppy = poppycreatures[i];
+      var loc = new L.LatLng(poppy.lat, poppy.lon); 
+      var marker = new L.Marker(loc);
+      marker.desc = poppy.desc;
+      map.addLayer(marker);
+      oms.addMarker(marker); 
+    }
+
+    // events 
+    $("#eventCalendarHumanDate").eventCalendar({jsonDateFormat: 'human', 
+                                                jsonData: events});
+   }
+    </script>
+</body>
+</html>
