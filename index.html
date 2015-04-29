@@ -31,7 +31,7 @@
         window.onload = function() {
 
       // map & layout
-      credits = 'Forked from <a href="https://github.com/faitmain/fablab.faitmain.org">Fait Main</a>, Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';
+      credits = 'Forked from <a href="https://github.com/faitmain/fablab.faitmain.org">Fait Main</a> ';
 
       var layer = new L.StamenTileLayer('watercolor');
       var map = L.map('map', {attributionControl: false}).setView([48.8567, 2.3508], 5);
@@ -58,10 +58,6 @@
       oms.addMarker(marker); 
     }
 
-    // events 
-    $("#eventCalendarHumanDate").eventCalendar({jsonDateFormat: 'human', 
-                                                jsonData: events});
-   }
-    </script>
+     </script>
 </body>
 </html>
