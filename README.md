@@ -12,4 +12,8 @@ http://daweeed.github.io/whereispoppy/
 To add your Poppy on the map, you must add your GPS localisation on this poppy.js file :
 https://github.com/daweeed/whereispoppy/blob/gh-pages/poppy.js
 
+----------
+
+Forked from : https://github.com/faitmain/fablab.faitmain.org
+
 
