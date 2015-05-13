@@ -7,5 +7,6 @@ var poppycreatures = [
   {'lat': 48.833599, 'lon': 2.358404, 'desc': "<a href='http://www.ensam.eu/'>Arts et Métiers ParisTech</a>: 1 Poppy Humanoid Beta"},
   {'lat': 48.848849, 'lon': 2.345485, 'desc': "<a href='http://www.college-de-france.fr/'>Collège de France</a>: 1 Poppy Humanoid Beta"},
   {'lat': 43.604260, 'lon': 1.443670, 'desc': "<a href='http://www.science-animation.org/'>Science Animation</a> : 1 Poppy humanoid et 1 ergorobot à adopter - contact@science-animation.org"},
-  {'lat': 44.875772, 'lon': -0.577901, 'desc': "<a href='http://www.generationrobots.com/fr/279-poppy-plateforme-robotique-opensource'>Génération Robots / Humarobotics</a>"}
+  {'lat': 44.875772, 'lon': -0.577901, 'desc': "<a href='http://www.generationrobots.com/fr/279-poppy-plateforme-robotique-opensource'>Génération Robots / Humarobotics</a>"},
+  {'lat': 45.198016, 'lon': 5.732268, 'desc': "<a href='http://lacasemate.fr/'>La Casemate</a> : 1 Poppy humanoid et 1 ergorobot"}
 ]
