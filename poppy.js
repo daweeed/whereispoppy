@@ -12,5 +12,6 @@ var poppycreatures = [
   {'lat': 49.191278, 'lon': -0.304344, 'desc': "<a href='http://www.relais-sciences.org/'>Relais d'sciences</a> : 1 Poppy humanoid et 1 ergorobot"},
   {'lat': 44.859921, 'lon': -0.554149, 'desc': "<a href='http://www.cap-sciences.net/'>Cap Sciences</a> : 1 Poppy humanoid et 1 ergorobot"},
   {'lat': 48.105119, 'lon': -1.675129, 'desc': "<a href='http://www.espace-sciences.org/'>Espace des sciences</a> : 2 Poppy humanoid et 1 ergorobot"}
+  {'lat': 50.073341, 'lon': 14.394913, 'desc': "<a href='https://cartheur.com'>Cartheur Robotics</a> : 2 Poppy humanoids"}
 , 
 ]
